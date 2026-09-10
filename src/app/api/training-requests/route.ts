@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { getSupabaseRestConfig } from "@/lib/supabase-rest";
+
 type TrainingRequestPayload = {
   name?: string;
   company?: string;
@@ -14,10 +16,9 @@ function normalizeValue(value: unknown) {
 }
 
 export async function POST(request: Request) {
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabase = getSupabaseRestConfig();
 
-  if (!supabaseUrl || !serviceRoleKey) {
+  if (!supabase) {
     return NextResponse.json(
       { error: "Supabase bağlantı ayarları eksik." },
       { status: 500 }
@@ -39,10 +40,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const response = await fetch(`${supabaseUrl}/rest/v1/training_requests`, {
+  const response = await fetch(`${supabase.restUrl}/training_requests`, {
     method: "POST",
     headers: {
-      apikey: serviceRoleKey,
+      ...supabase.headers,
       "Content-Type": "application/json",
       Prefer: "return=minimal"
     },
@@ -59,6 +60,9 @@ export async function POST(request: Request) {
   });
 
   if (!response.ok) {
+    const details = await response.text().catch(() => "");
+    console.error("Supabase training request insert failed", response.status, details);
+
     return NextResponse.json(
       { error: "Talep kaydedilemedi. Lütfen tekrar deneyin." },
       { status: 502 }
