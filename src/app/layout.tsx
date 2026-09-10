@@ -17,9 +17,20 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    icon: [
+      {
+        url: "/favicon.png?v=2",
+        type: "image/png",
+        sizes: "512x512"
+      },
+      {
+        url: "/icon.png?v=2",
+        type: "image/png",
+        sizes: "512x512"
+      }
+    ],
+    shortcut: "/favicon.png?v=2",
+    apple: "/favicon.png?v=2"
   },
   alternates: {
     canonical: "/"
@@ -84,6 +95,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="tr">
       <head>
+        <link rel="icon" href="/favicon.png?v=2" sizes="512x512" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png?v=2" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
