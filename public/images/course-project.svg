@@ -1,0 +1,12 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="142" y="132" width="170" height="92" rx="10" fill="#DBEAFE"/>
+  <rect x="394" y="132" width="170" height="92" rx="10" fill="#ECFDF5"/>
+  <rect x="646" y="132" width="170" height="92" rx="10" fill="#FEF3C7"/>
+  <path d="M312 178H394M564 178H646" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+  <rect x="142" y="300" width="674" height="18" rx="9" fill="#E2E8F0"/>
+  <rect x="142" y="300" width="436" height="18" rx="9" fill="#2563EB"/>
+  <text x="142" y="390" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Proje Yönetimi</text>
+  <text x="142" y="424" fill="#64748B" font-family="Arial, sans-serif" font-size="23">Planlama, risk ve paydaş uyumu</text>
+</svg>

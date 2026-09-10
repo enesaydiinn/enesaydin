@@ -1,0 +1,10 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8F9FA"/>
+  <rect x="96" y="86" width="768" height="368" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="156" y="146" width="400" height="34" rx="8" fill="#0F172A"/>
+  <rect x="156" y="220" width="560" height="22" rx="8" fill="#CBD5E1"/>
+  <rect x="156" y="274" width="460" height="22" rx="8" fill="#CBD5E1"/>
+  <circle cx="704" cy="322" r="72" fill="#DBEAFE" stroke="#2563EB" stroke-width="10"/>
+  <path d="M668 324L694 350L744 292" stroke="#2563EB" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="156" y="392" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Sertifika</text>
+</svg>

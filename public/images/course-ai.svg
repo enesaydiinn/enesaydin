@@ -1,0 +1,13 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="56" y="56" width="848" height="428" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <path d="M190 356H456C513 356 515 184 572 184H770" stroke="#2563EB" stroke-width="12" stroke-linecap="round"/>
+  <path d="M190 254H327C374 254 378 152 425 152H770" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="190" cy="254" r="18" fill="#FFFFFF" stroke="#0F172A" stroke-width="8"/>
+  <circle cx="572" cy="184" r="20" fill="#FFFFFF" stroke="#2563EB" stroke-width="8"/>
+  <circle cx="456" cy="356" r="18" fill="#FFFFFF" stroke="#2563EB" stroke-width="8"/>
+  <rect x="134" y="112" width="168" height="54" rx="8" fill="#DBEAFE"/>
+  <rect x="134" y="394" width="254" height="34" rx="8" fill="#E0F2FE"/>
+  <text x="134" y="146" fill="#0F172A" font-family="Arial, sans-serif" font-size="30" font-weight="700">Yapay Zeka</text>
+  <text x="134" y="427" fill="#64748B" font-family="Arial, sans-serif" font-size="24">İstem Mühendisliği</text>
+</svg>

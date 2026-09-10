@@ -1,0 +1,10 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="78" y="78" width="804" height="384" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <path d="M252 342C338 210 438 188 514 264C578 328 666 308 752 190" stroke="#2563EB" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="252" cy="342" r="24" fill="#0F172A"/>
+  <circle cx="514" cy="264" r="24" fill="#0F172A"/>
+  <circle cx="752" cy="190" r="24" fill="#0F172A"/>
+  <rect x="176" y="130" width="220" height="50" rx="10" fill="#DBEAFE"/>
+  <text x="176" y="434" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Çevik Eğitim</text>
+</svg>

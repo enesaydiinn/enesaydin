@@ -1,0 +1,12 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="164" y="318" width="82" height="92" rx="10" fill="#DBEAFE"/>
+  <rect x="300" y="250" width="82" height="160" rx="10" fill="#BFDBFE"/>
+  <rect x="436" y="190" width="82" height="220" rx="10" fill="#93C5FD"/>
+  <rect x="572" y="146" width="82" height="264" rx="10" fill="#60A5FA"/>
+  <rect x="708" y="220" width="82" height="190" rx="10" fill="#34D399"/>
+  <path d="M152 410H814" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+  <path d="M174 252L330 208L474 138L610 112L760 172" stroke="#2563EB" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="164" y="472" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Veri Analitiği</text>
+</svg>

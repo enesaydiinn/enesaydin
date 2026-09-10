@@ -1,0 +1,12 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="70" y="72" width="820" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="242" cy="236" r="102" fill="#DBEAFE"/>
+  <circle cx="242" cy="236" r="68" fill="#FFFFFF" stroke="#2563EB" stroke-width="10"/>
+  <path d="M208 237L232 261L280 207" stroke="#2563EB" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="410" y="154" width="332" height="30" rx="8" fill="#0F172A"/>
+  <rect x="410" y="216" width="420" height="24" rx="8" fill="#CBD5E1"/>
+  <rect x="410" y="270" width="354" height="24" rx="8" fill="#CBD5E1"/>
+  <text x="410" y="360" fill="#0F172A" font-family="Arial, sans-serif" font-size="38" font-weight="700">PMP Hazırlık</text>
+  <text x="410" y="398" fill="#64748B" font-family="Arial, sans-serif" font-size="24">Sınav stratejisi ve uygulama</text>
+</svg>
