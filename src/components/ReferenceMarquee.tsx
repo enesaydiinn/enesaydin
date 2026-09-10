@@ -26,8 +26,8 @@ export function ReferenceMarquee() {
   const items = [...references, ...references];
 
   return (
-    <div className="overflow-hidden border-y border-brand-line bg-white py-5">
-      <div className="flex w-max animate-marquee gap-4">
+    <div className="group overflow-hidden border-y border-brand-line bg-white py-5">
+      <div className="flex w-max animate-marquee gap-4 group-hover:[animation-play-state:paused]">
         {items.map((reference, index) => (
           <ReferenceLogoCard reference={reference} key={`${reference.name}-${index}`} />
         ))}

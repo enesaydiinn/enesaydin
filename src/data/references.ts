@@ -18,6 +18,10 @@ export const references = [
     logoFrameClassName: "h-20 w-20"
   },
   {
+    name: "Sosyal Güvenlik Kurumu",
+    logo: "/images/references/sgk.png"
+  },
+  {
     name: "Turkcell",
     logo: "/images/references/turkcell.png"
   },
