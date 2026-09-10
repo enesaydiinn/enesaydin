@@ -19,7 +19,9 @@ export const references = [
   },
   {
     name: "Sosyal Güvenlik Kurumu",
-    logo: "/images/references/sgk.png"
+    logo: "/images/references/sgk.png",
+    logoFrameClassName: "h-20 w-32",
+    logoClassName: "scale-125"
   },
   {
     name: "Turkcell",
