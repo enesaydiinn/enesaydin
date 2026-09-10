@@ -31,8 +31,7 @@ export async function GET() {
 
   const response = await fetch(`${supabaseUrl}/rest/v1/training_requests?${searchParams.toString()}`, {
     headers: {
-      apikey: serviceRoleKey,
-      Authorization: `Bearer ${serviceRoleKey}`
+      apikey: serviceRoleKey
     },
     cache: "no-store"
   });
