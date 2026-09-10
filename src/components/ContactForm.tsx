@@ -4,34 +4,58 @@ import { FormEvent, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send } from "lucide-react";
 
-import { corporateTrainings, siteConfig } from "@/data/site";
+import { corporateTrainings } from "@/data/site";
 
 export function ContactForm() {
   const searchParams = useSearchParams();
   const requestedTraining = searchParams.get("egitim") ?? "";
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const selectedTraining = useMemo(() => {
     const course = corporateTrainings.find((item) => item.slug === requestedTraining);
     return course?.title ?? requestedTraining;
   }, [requestedTraining]);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const subject = "Kurumsal Eğitim Talebi";
-    const body = [
-      `Ad Soyad: ${formData.get("name")}`,
-      `Kurum Adı: ${formData.get("company")}`,
-      `E-posta: ${formData.get("email")}`,
-      `Telefon: ${formData.get("phone")}`,
-      `Talep Edilen Eğitim: ${formData.get("training")}`,
-      "",
-      `Mesaj: ${formData.get("message")}`
-    ].join("\n");
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    setError("");
+    setSent(false);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/training-requests", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          company: formData.get("company"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          training: formData.get("training"),
+          message: formData.get("message")
+        })
+      });
+
+      if (!response.ok) {
+        const result = (await response.json().catch(() => null)) as { error?: string } | null;
+        setError(result?.error ?? "Talep kaydedilemedi. Lütfen tekrar deneyin.");
+        return;
+      }
+
+      form.reset();
+      setSent(true);
+    } catch {
+      setError("Talep gönderilemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -103,14 +127,20 @@ export function ContactForm() {
       </label>
       <button
         type="submit"
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-blue px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+        disabled={isSubmitting}
+        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-brand-blue px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
       >
         <Send className="h-4 w-4" aria-hidden="true" />
-        Eğitim Talebi Gönder
+        {isSubmitting ? "Gönderiliyor..." : "Eğitim Talebi Gönder"}
       </button>
       {sent ? (
         <p className="rounded-md bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-700">
-          Talep bilgileri e-posta taslağına aktarıldı.
+          Eğitim talebiniz alındı. En kısa sürede sizinle iletişime geçilecektir.
+        </p>
+      ) : null}
+      {error ? (
+        <p className="rounded-md bg-red-50 px-3 py-2 text-sm font-semibold text-red-700">
+          {error}
         </p>
       ) : null}
     </form>
