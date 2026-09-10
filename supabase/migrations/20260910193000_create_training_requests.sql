@@ -7,6 +7,7 @@ create table if not exists public.training_requests (
   email text not null,
   phone text not null,
   training text not null,
+  training_other text,
   message text not null,
   source text not null default 'website',
   status text not null default 'new',

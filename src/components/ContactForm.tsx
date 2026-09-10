@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send } from "lucide-react";
 
@@ -12,19 +12,44 @@ export function ContactForm() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [trainingValue, setTrainingValue] = useState("");
 
   const selectedTraining = useMemo(() => {
     const course = corporateTrainings.find((item) => item.slug === requestedTraining);
     return course?.title ?? requestedTraining;
   }, [requestedTraining]);
 
+  useEffect(() => {
+    setTrainingValue(selectedTraining);
+  }, [selectedTraining]);
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
+    const training = String(formData.get("training") ?? "").trim();
+    const trainingOther = String(formData.get("trainingOther") ?? "").trim();
 
     setError("");
     setSent(false);
+
+    if (/\d/.test(name)) {
+      setError("Ad Soyad alanına numara yazılamaz.");
+      return;
+    }
+
+    if (/[A-Za-zÇĞİÖŞÜçğıöşü]/.test(phone)) {
+      setError("Telefon alanına harf yazılamaz.");
+      return;
+    }
+
+    if (training === "Diğer" && !trainingOther) {
+      setError("Lütfen talep ettiğiniz eğitimi yazın.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -34,11 +59,12 @@ export function ContactForm() {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          name: formData.get("name"),
+          name,
           company: formData.get("company"),
           email: formData.get("email"),
-          phone: formData.get("phone"),
-          training: formData.get("training"),
+          phone,
+          training,
+          trainingOther,
           message: formData.get("message")
         })
       });
@@ -50,6 +76,7 @@ export function ContactForm() {
       }
 
       form.reset();
+      setTrainingValue("");
       setSent(true);
     } catch {
       setError("Talep gönderilemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.");
@@ -66,6 +93,8 @@ export function ContactForm() {
           <input
             name="name"
             required
+            pattern="^[^0-9]+$"
+            title="Ad Soyad alanına numara yazılamaz."
             className="min-h-11 rounded-md border border-brand-line px-3 text-sm font-normal text-brand-ink outline-none transition focus:border-brand-blue"
             autoComplete="name"
           />
@@ -96,6 +125,9 @@ export function ContactForm() {
           <input
             name="phone"
             required
+            inputMode="tel"
+            pattern="^[0-9+()\\s-]+$"
+            title="Telefon alanına harf yazılamaz."
             className="min-h-11 rounded-md border border-brand-line px-3 text-sm font-normal text-brand-ink outline-none transition focus:border-brand-blue"
             autoComplete="tel"
           />
@@ -105,7 +137,9 @@ export function ContactForm() {
         Talep Edilen Eğitim
         <select
           name="training"
-          defaultValue={selectedTraining}
+          value={trainingValue}
+          onChange={(event) => setTrainingValue(event.target.value)}
+          required
           className="min-h-11 rounded-md border border-brand-line bg-white px-3 text-sm font-normal text-brand-ink outline-none transition focus:border-brand-blue"
         >
           <option value="">Eğitim seçiniz</option>
@@ -114,8 +148,20 @@ export function ContactForm() {
               {training.title}
             </option>
           ))}
+          <option value="Diğer">Diğer</option>
         </select>
       </label>
+      {trainingValue === "Diğer" ? (
+        <label className="grid gap-2 text-sm font-semibold text-brand-ink">
+          Talep Edilen Diğer Eğitim
+          <input
+            name="trainingOther"
+            required
+            className="min-h-11 rounded-md border border-brand-line px-3 text-sm font-normal text-brand-ink outline-none transition focus:border-brand-blue"
+            placeholder="Talep ettiğiniz eğitimi yazın"
+          />
+        </label>
+      ) : null}
       <label className="grid gap-2 text-sm font-semibold text-brand-ink">
         Mesaj
         <textarea

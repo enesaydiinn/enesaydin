@@ -24,7 +24,7 @@ export async function GET() {
   }
 
   const searchParams = new URLSearchParams({
-    select: "id,name,company,email,phone,training,message,source,status,user_agent,created_at",
+    select: "id,name,company,email,phone,training,training_other,message,source,status,user_agent,created_at",
     order: "created_at.desc",
     limit: "100"
   });

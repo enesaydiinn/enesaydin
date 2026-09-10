@@ -10,6 +10,7 @@ type TrainingRequest = {
   email: string;
   phone: string;
   training: string;
+  training_other: string | null;
   message: string;
   status: string;
   source: string;
@@ -200,7 +201,12 @@ export function AdminDashboard() {
                   <td className="whitespace-nowrap px-4 py-4 font-medium text-brand-ink">{formatDate(request.created_at)}</td>
                   <td className="px-4 py-4 font-semibold text-brand-navy">{request.name}</td>
                   <td className="px-4 py-4 text-brand-ink">{request.company}</td>
-                  <td className="px-4 py-4 text-brand-ink">{request.training}</td>
+                  <td className="px-4 py-4 text-brand-ink">
+                    <span className="font-semibold">{request.training}</span>
+                    {request.training_other ? (
+                      <span className="mt-1 block text-brand-muted">{request.training_other}</span>
+                    ) : null}
+                  </td>
                   <td className="px-4 py-4 text-brand-muted">
                     <a className="block font-semibold text-brand-blue" href={`mailto:${request.email}`}>
                       {request.email}
