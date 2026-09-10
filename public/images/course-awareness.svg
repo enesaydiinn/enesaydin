@@ -1,0 +1,11 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="480" cy="238" r="112" fill="#DBEAFE" stroke="#2563EB" stroke-width="10"/>
+  <path d="M480 126V350M368 238H592M402 160C452 206 508 206 558 160M402 316C452 270 508 270 558 316" stroke="#0F172A" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="248" cy="208" r="44" fill="#ECFDF5" stroke="#22C55E" stroke-width="8"/>
+  <circle cx="712" cy="208" r="44" fill="#FEF3C7" stroke="#F59E0B" stroke-width="8"/>
+  <circle cx="248" cy="344" r="44" fill="#E0F2FE" stroke="#3B82F6" stroke-width="8"/>
+  <circle cx="712" cy="344" r="44" fill="#F1F5F9" stroke="#64748B" stroke-width="8"/>
+  <text x="140" y="460" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Teknoloji Farkındalığı</text>
+</svg>

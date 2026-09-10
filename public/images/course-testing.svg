@@ -1,0 +1,13 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="166" y="136" width="470" height="286" rx="14" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="8"/>
+  <rect x="166" y="136" width="470" height="64" rx="14" fill="#0F172A"/>
+  <circle cx="210" cy="168" r="10" fill="#3B82F6"/>
+  <circle cx="246" cy="168" r="10" fill="#22C55E"/>
+  <circle cx="282" cy="168" r="10" fill="#F59E0B"/>
+  <path d="M242 262L288 308L374 222M242 360L288 406L374 320" stroke="#2563EB" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="680" y="170" width="112" height="112" rx="18" fill="#DBEAFE"/>
+  <rect x="680" y="320" width="112" height="58" rx="12" fill="#ECFDF5"/>
+  <text x="166" y="476" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Yazılım Testi</text>
+</svg>

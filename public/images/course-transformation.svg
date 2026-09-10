@@ -1,0 +1,11 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="148" y="144" width="180" height="252" rx="18" fill="#DBEAFE"/>
+  <rect x="390" y="112" width="180" height="284" rx="18" fill="#E0F2FE"/>
+  <rect x="632" y="184" width="180" height="212" rx="18" fill="#ECFDF5"/>
+  <path d="M202 318L262 258L322 302L450 174L544 238L710 146" stroke="#0F172A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="450" cy="174" r="18" fill="#2563EB"/>
+  <circle cx="710" cy="146" r="18" fill="#2563EB"/>
+  <text x="148" y="460" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Dijital Dönüşüm</text>
+</svg>

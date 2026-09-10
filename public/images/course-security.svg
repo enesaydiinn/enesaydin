@@ -1,0 +1,9 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="64" y="72" width="832" height="396" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <path d="M480 126L664 194V286C664 374 594 424 480 452C366 424 296 374 296 286V194L480 126Z" fill="#DBEAFE" stroke="#2563EB" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M422 280L462 320L546 236" stroke="#0F172A" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M170 176H258M702 176H790M170 364H258M702 364H790" stroke="#CBD5E1" stroke-width="10" stroke-linecap="round"/>
+  <text x="128" y="438" fill="#0F172A" font-family="Arial, sans-serif" font-size="36" font-weight="700">Güvenli Teslimat</text>
+  <text x="128" y="472" fill="#64748B" font-family="Arial, sans-serif" font-size="23">DevSecOps ve kalite pratikleri</text>
+</svg>

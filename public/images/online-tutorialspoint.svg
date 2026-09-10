@@ -1,0 +1,8 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#F8FAFC"/>
+  <rect x="78" y="78" width="804" height="384" rx="24" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <rect x="178" y="142" width="270" height="248" rx="18" fill="#DBEAFE"/>
+  <rect x="512" y="142" width="270" height="248" rx="18" fill="#ECFDF5"/>
+  <path d="M236 222H390M236 278H352M570 222H724M570 278H686" stroke="#0F172A" stroke-width="12" stroke-linecap="round"/>
+  <text x="178" y="434" fill="#0F172A" font-family="Arial, sans-serif" font-size="34" font-weight="700">Küresel Öğrenme</text>
+</svg>
