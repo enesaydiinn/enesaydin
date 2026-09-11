@@ -36,7 +36,19 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       description: post.seoDescription,
       publishedTime: post.publishedAt,
       authors: [siteConfig.name],
-      url: absoluteUrl(`/blog/${post.slug}`)
+      url: absoluteUrl(`/blog/${post.slug}`),
+      images: [
+        {
+          url: absoluteUrl(post.coverImage),
+          alt: `${post.title} kapak görseli`
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.seoTitle,
+      description: post.seoDescription,
+      images: [absoluteUrl(post.coverImage)]
     }
   };
 }
@@ -56,6 +68,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     description: post.seoDescription,
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
+    image: absoluteUrl(post.coverImage),
+    inLanguage: "tr-TR",
     author: {
       "@type": "Person",
       name: siteConfig.name,

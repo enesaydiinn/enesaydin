@@ -8,11 +8,17 @@ import { blogPosts, siteConfig } from "@/data/site";
 import { absoluteUrl } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog | Proje Yönetimi, Yapay Zeka, Jira, ITIL ve DevSecOps",
   description:
-    "Proje yönetimi, PMP, yapay zeka, DevSecOps, çevik yaklaşım, Scrum ve dijital dönüşüm üzerine kurumsal eğitim yazıları.",
+    "Proje yönetimi, PMP, yapay zeka, ChatGPT, Jira, ITIL, DevSecOps, Scrum, çevik çalışma ve kurumsal eğitimler üzerine detaylı rehber yazılar.",
   alternates: {
     canonical: "/blog"
+  },
+  openGraph: {
+    title: "Proje Yönetimi, Yapay Zeka ve Kurumsal Eğitim Blogu",
+    description:
+      "PMP, ITIL, Jira, DevSecOps, yapay zeka okuryazarlığı ve kurumsal eğitim tasarımı hakkında detaylı Türkçe rehberler.",
+    url: absoluteUrl("/blog")
   }
 };
 
@@ -28,6 +34,7 @@ const articleListSchema = {
       headline: post.title,
       description: post.excerpt,
       datePublished: post.publishedAt,
+      image: absoluteUrl(post.coverImage),
       author: {
         "@type": "Person",
         name: siteConfig.name
