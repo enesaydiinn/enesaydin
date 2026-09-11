@@ -111,9 +111,6 @@ export default function HomePage() {
               title="Öne çıkan eğitim başlıkları"
               description="Kurumunuzun hedeflerine, ekip olgunluğuna ve sektör dinamiklerine göre uyarlanabilen pratik programlar."
             />
-            <ButtonLink href="/kurumsal-egitimler" variant="secondary" className="w-fit">
-              Tüm Eğitimler
-            </ButtonLink>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {corporateTrainings.slice(0, 6).map((course) => (
@@ -147,9 +144,6 @@ export default function HomePage() {
               title="Kurumsal etkinlikler için güçlü konuşma başlıkları"
               description="Yapay zeka, proje yönetimi, DevSecOps ve dijital dönüşüm konularında sahneye uygun, güven veren konferans içerikleri."
             />
-            <ButtonLink href="/konferanslar" variant="secondary" className="w-fit">
-              Konferansları Gör
-            </ButtonLink>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {conferences.map((conference) => (
