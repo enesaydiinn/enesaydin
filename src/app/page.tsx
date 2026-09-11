@@ -223,16 +223,11 @@ export default function HomePage() {
 
       <section id="blog" className="scroll-mt-24 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <SectionHeading
-              eyebrow="Blog"
-              title="Proje yönetimi ve teknoloji gündeminden notlar"
-              description="Kurumsal eğitimlerde sık karşılaşılan konulara yönelik kısa, uygulanabilir ve SEO dostu içerikler."
-            />
-            <ButtonLink href="/blog" variant="secondary" className="w-fit">
-              Blogu Gör
-            </ButtonLink>
-          </div>
+          <SectionHeading
+            eyebrow="Blog"
+            title="Proje yönetimi ve teknoloji gündeminden notlar"
+            description="Kurumsal eğitimlerde sık karşılaşılan konulara yönelik kısa, uygulanabilir ve SEO dostu içerikler."
+          />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {blogPosts.slice(0, 3).map((post) => (
               <BlogCard post={post} key={post.slug} />
