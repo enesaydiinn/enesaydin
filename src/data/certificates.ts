@@ -31,30 +31,6 @@ export const certifications = [
     description:
       "Bilgisayar mühendisliği alanındaki doktora çalışmalarıyla teknoloji, yazılım süreçleri ve akademik araştırma yaklaşımını destekleyen uzmanlık zemini."
   },
-  {
-    name: "Cambridge İngilizce",
-    issuer: "Cambridge İngilizce Değerlendirme",
-    area: "Uluslararası İletişim",
-    image: "/images/certificate-placeholder.svg",
-    description:
-      "Uluslararası eğitim ve danışmanlık ortamlarında etkili İngilizce iletişim yetkinliğini destekler."
-  },
-  {
-    name: "Yüksek Lisans",
-    issuer: "Akademik Program",
-    area: "Bilgisayar Mühendisliği",
-    image: "/images/certificate-placeholder.svg",
-    description:
-      "Teknoloji, yazılım süreçleri ve akademik araştırma yaklaşımını eğitim içeriklerine taşıyan temel."
-  },
-  {
-    name: "PMP Eğitim Çalışmaları",
-    issuer: "Kurumsal Eğitim Programları",
-    area: "Sınav Hazırlık ve Mentorluk",
-    image: "/images/certificate-placeholder.svg",
-    description:
-      "PMP adayları için sınav stratejisi, soru çözümü ve proje yönetimi kavramlarına yönelik eğitim deneyimi."
-  }
 ];
 
 export type Certification = (typeof certifications)[number];
