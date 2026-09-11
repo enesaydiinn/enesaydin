@@ -54,51 +54,6 @@ export const corporateTrainings = [
     description:
       "Ekiplerin üretken yapay zeka araçlarını güvenli, ölçülebilir ve iş sonuçlarına bağlı şekilde kullanmasını sağlayan uygulamalı eğitim."
   },
-  {
-    slug: "is-analizi",
-    title: "İş Analizi ve Gereksinim Yönetimi",
-    institution: "Proje ve Ürün Ekipleri",
-    category: "İş Analizi",
-    image: "/images/course-analysis.svg",
-    description:
-      "Paydaş analizi, süreç modelleme, kullanıcı hikayeleri ve kabul kriterleri üzerinden net gereksinim yönetimi yaklaşımı."
-  },
-  {
-    slug: "dijital-donusum",
-    title: "Dijital Dönüşüm Yol Haritası",
-    institution: "Yönetim ve Dönüşüm Ekipleri",
-    category: "Dijital Dönüşüm",
-    image: "/images/course-transformation.svg",
-    description:
-      "Teknoloji yatırımlarını süreç, insan, veri ve ölçüm boyutlarıyla ele alan kurumlara özel dönüşüm çerçevesi."
-  },
-  {
-    slug: "veri-analitigi",
-    title: "Veri Analitiği Farkındalığı",
-    institution: "İş Birimleri",
-    category: "Veri Analitiği",
-    image: "/images/course-data.svg",
-    description:
-      "Karar alma kültürünü veriyle güçlendirmek isteyen ekipler için metrik, raporlama ve analitik düşünme programı."
-  },
-  {
-    slug: "teknoloji-farkindaligi",
-    title: "Kurum İçi Teknoloji Farkındalığı",
-    institution: "Tüm Departmanlar",
-    category: "Kurum İçi Teknoloji Farkındalığı",
-    image: "/images/course-awareness.svg",
-    description:
-      "Yapay zeka, siber güvenlik, bulut, veri ve modern yazılım süreçlerini teknik olmayan ekipler için anlaşılır hale getirir."
-  },
-  {
-    slug: "itil-bt-servis-yonetimi",
-    title: "ITIL ve BT Servis Yönetimi",
-    institution: "BT Operasyon Ekipleri",
-    category: "ITIL ve BT Servis Yönetimi",
-    image: "/images/course-project.svg",
-    description:
-      "BT hizmet yönetimi, değer akışı, olay/problem yönetimi ve hizmet kalitesi odağında kurum içi BT olgunluğunu artırır."
-  }
 ];
 
 export type CorporateTraining = (typeof corporateTrainings)[number];
