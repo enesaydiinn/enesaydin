@@ -1,18 +1,4 @@
-export type BlogPost = {
-  slug: string;
-  title: string;
-  seoTitle: string;
-  seoDescription: string;
-  category: string;
-  publishedAt: string;
-  readingTime: string;
-  coverImage: string;
-  coverImageFit?: "cover" | "contain";
-  excerpt: string;
-  body: string[];
-};
-
-export const blogPosts: BlogPost[] = [
+export const blogPosts = [
   {
     slug: "itil-5-kurumsal-bt-yonetimi",
     title: "ITIL 5 ile Kurumsal BT Yönetiminde Yeni Dönem",
@@ -23,6 +9,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-02-12",
     readingTime: "10 dk",
     coverImage: "/images/blog/itil-5.png",
+    coverImageFit: "contain" as const,
     excerpt:
       "ITIL 5 yaklaşımıyla BT hizmet yönetimi, değer akışı, otomasyon, ölçülebilir hizmet kalitesi ve yapay zeka destekli operasyon kültürünü kurumsal düzeyde yeniden ele alma rehberi.",
     body: [
@@ -46,6 +33,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2026-01-22",
     readingTime: "11 dk",
     coverImage: "/images/blog/pmbok-8.jpg",
+    coverImageFit: "contain" as const,
     excerpt:
       "PMBOK 8 ile proje yönetiminde değer teslimi, yapay zeka, hibrit çalışma, liderlik, veri odaklı karar alma ve PMP hazırlığı açısından beklenen değişimleri değerlendirme rehberi.",
     body: [
@@ -69,6 +57,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-12-04",
     readingTime: "9 dk",
     coverImage: "/images/blog/yeni-pmp.png",
+    coverImageFit: "contain" as const,
     excerpt:
       "Jira panolarını yalnızca görev takibi için değil, ekip ritmi, sprint planlama, risk görünürlüğü, dashboard raporlama ve karar alma süreçleri için etkili kullanma rehberi.",
     body: [
@@ -91,7 +80,8 @@ export const blogPosts: BlogPost[] = [
     category: "Yapay Zeka",
     publishedAt: "2025-11-15",
     readingTime: "10 dk",
-    coverImage: "/images/konferans-yapay-zeka-okuryazarligi.png",
+    coverImage: "/images/course-ai.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "Kurumsal yapay zeka eğitimleri; ChatGPT, üretken yapay zeka, prompt engineering, veri güvenliği ve departman bazlı kullanım senaryolarıyla kurumlarda verimlilik kültürünü nasıl dönüştürür?",
     body: [
@@ -114,7 +104,8 @@ export const blogPosts: BlogPost[] = [
     category: "DevSecOps",
     publishedAt: "2025-10-09",
     readingTime: "9 dk",
-    coverImage: "/images/konferans-devsecops-guvenli-yazilim.png",
+    coverImage: "/images/course-security.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "DevSecOps yaklaşımıyla güvenliği yazılım geliştirme yaşam döngüsünün son kontrolü olmaktan çıkarıp CI/CD, otomasyon, test ve ekip kültürü içine yerleştirme rehberi.",
     body: [
@@ -137,7 +128,8 @@ export const blogPosts: BlogPost[] = [
     category: "Çevik",
     publishedAt: "2025-09-18",
     readingTime: "10 dk",
-    coverImage: "/images/cevik-scrum-online-toplanti.png",
+    coverImage: "/images/course-agile.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "Çevik yaklaşım, Scrum ve hibrit proje yönetimi arasındaki farkları; ekip yapısı, belirsizlik düzeyi, regülasyon ihtiyacı ve teslimat beklentisine göre değerlendirme rehberi.",
     body: [
@@ -160,7 +152,8 @@ export const blogPosts: BlogPost[] = [
     category: "Dijital Dönüşüm",
     publishedAt: "2025-08-27",
     readingTime: "9 dk",
-    coverImage: "/images/konferans-yapay-zeka-okuryazarligi.png",
+    coverImage: "/images/course-awareness.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "Teknik olmayan ekiplerin ChatGPT ve üretken yapay zeka araçlarını güvenli, bilinçli ve verimli kullanabilmesi için yapay zeka okuryazarlığı neden kritik hale geldi?",
     body: [
@@ -183,7 +176,8 @@ export const blogPosts: BlogPost[] = [
     category: "Kariyer",
     publishedAt: "2025-07-22",
     readingTime: "10 dk",
-    coverImage: "/images/proje-yonetimi-ptt.png",
+    coverImage: "/images/course-project.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "ITIL, PMP ve çevik sertifikaların teknoloji, proje yönetimi ve kurumsal kariyer gelişiminde ne zaman gerçek değer ürettiğini değerlendirme rehberi.",
     body: [
@@ -206,7 +200,8 @@ export const blogPosts: BlogPost[] = [
     category: "Kurumsal Eğitim",
     publishedAt: "2025-06-11",
     readingTime: "9 dk",
-    coverImage: "/images/yazilim-test-av.png",
+    coverImage: "/images/course-transformation.svg",
+    coverImageFit: "contain" as const,
     excerpt:
       "Yapay zeka çağında kurumsal eğitimler; ihtiyaç analizi, kişiselleştirilmiş öğrenme, ölçümleme, rol bazlı içerik ve sürekli gelişim kültürüyle yeniden şekilleniyor.",
     body: [
@@ -224,3 +219,5 @@ export const blogPosts: BlogPost[] = [
 
 export const getBlogPost = (slug: string) =>
   blogPosts.find((post) => post.slug === slug);
+
+export type BlogPost = (typeof blogPosts)[number];
