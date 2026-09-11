@@ -62,7 +62,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ButtonLink href="/#iletisim" className="hidden px-4 py-2.5 sm:inline-flex">
+          <ButtonLink href="/iletisim" className="hidden px-4 py-2.5 sm:inline-flex">
             Eğitim Talep Et
           </ButtonLink>
           <button
@@ -96,7 +96,7 @@ export function Header() {
                 </Link>
               );
             })}
-            <ButtonLink href="/#iletisim" className="mt-2 w-full sm:hidden">
+            <ButtonLink href="/iletisim" className="mt-2 w-full sm:hidden">
               Eğitim Talep Et
             </ButtonLink>
           </nav>
