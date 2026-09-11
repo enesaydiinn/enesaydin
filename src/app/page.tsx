@@ -59,7 +59,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/iletisim">Kurumsal Eğitim Talep Et</ButtonLink>
-              <ButtonLink href="/kurumsal-egitimler" variant="secondary">
+              <ButtonLink href="/#kurumsal-egitimler" variant="secondary">
                 Eğitimleri İncele
               </ButtonLink>
             </div>
