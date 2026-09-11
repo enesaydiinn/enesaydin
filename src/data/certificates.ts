@@ -31,6 +31,14 @@ export const certifications = [
     description:
       "Bilgisayar mühendisliği alanındaki doktora çalışmalarıyla teknoloji, yazılım süreçleri ve akademik araştırma yaklaşımını destekleyen uzmanlık zemini."
   },
+  {
+    name: "Cambridge İngilizce",
+    issuer: "Cambridge İngilizce Değerlendirme",
+    area: "Uluslararası İletişim",
+    image: "/images/certifications/cambridge-english.png",
+    description:
+      "Uluslararası eğitim ve danışmanlık ortamlarında etkili İngilizce iletişim yetkinliğini destekler."
+  }
 ];
 
 export type Certification = (typeof certifications)[number];

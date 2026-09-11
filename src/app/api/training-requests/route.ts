@@ -8,7 +8,6 @@ type TrainingRequestPayload = {
   email?: string;
   phone?: string;
   training?: string;
-  trainingOther?: string;
   message?: string;
 };
 
@@ -32,33 +31,11 @@ export async function POST(request: Request) {
   const email = normalizeValue(payload.email);
   const phone = normalizeValue(payload.phone);
   const training = normalizeValue(payload.training);
-  const trainingOther = normalizeValue(payload.trainingOther);
   const message = normalizeValue(payload.message);
 
   if (!name || !company || !email || !phone || !training || !message) {
     return NextResponse.json(
       { error: "Lütfen tüm zorunlu alanları doldurun." },
-      { status: 400 }
-    );
-  }
-
-  if (/\d/.test(name)) {
-    return NextResponse.json(
-      { error: "Ad Soyad alanına numara yazılamaz." },
-      { status: 400 }
-    );
-  }
-
-  if (/[A-Za-zÇĞİÖŞÜçğıöşü]/.test(phone)) {
-    return NextResponse.json(
-      { error: "Telefon alanına harf yazılamaz." },
-      { status: 400 }
-    );
-  }
-
-  if (training === "Diğer" && !trainingOther) {
-    return NextResponse.json(
-      { error: "Lütfen talep ettiğiniz eğitimi yazın." },
       { status: 400 }
     );
   }
@@ -76,7 +53,6 @@ export async function POST(request: Request) {
       email,
       phone,
       training,
-      training_other: trainingOther || null,
       message,
       source: "website",
       user_agent: request.headers.get("user-agent") ?? ""

@@ -9,7 +9,7 @@ import { certifications } from "@/data/site";
 export const metadata: Metadata = {
   title: "Sertifikalar",
   description:
-    "PMP, PSM, ISTQB ve doktora çalışmalarıyla proje yönetimi, çevik çalışma, yazılım testi ve akademik uzmanlık alanları.",
+    "PMP, PSM, ISTQB, Cambridge İngilizce ve doktora çalışmalarıyla proje yönetimi, çevik çalışma, yazılım testi, iletişim ve akademik uzmanlık alanları.",
   alternates: {
     canonical: "/sertifikalar"
   }
@@ -24,7 +24,7 @@ export default function CertificationsPage() {
           <SectionHeading
             eyebrow="Sertifikalar"
             title="Eğitim ve danışmanlık yaklaşımını güçlendiren yetkinlikler"
-            description="Sertifikalar proje yönetimi, çevik çalışma, yazılım kalite süreçleri ve akademik altyapı alanlarını destekler."
+            description="Sertifikalar proje yönetimi, çevik çalışma, yazılım kalite süreçleri, uluslararası iletişim ve akademik altyapı alanlarını destekler."
             level={1}
           />
           <ButtonLink href="/iletisim" className="mt-8 w-fit">
