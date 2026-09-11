@@ -27,9 +27,9 @@ export const certifications = [
     name: "Doktora",
     issuer: "Bilgisayar Mühendisliği",
     area: "Doktora Çalışmaları",
-    image: "/images/certifications/doktora.webp",
+    image: "/images/certifications/phd-ai-research.png",
     description:
-      "Bilgisayar mühendisliği alanındaki doktora çalışmalarıyla teknoloji, yazılım süreçleri ve akademik araştırma yaklaşımını destekleyen uzmanlık zemini."
+      "Büyük Dil Modelleri (LLM), RAG, doğal dil işleme ve akıllı sistemler odağında yürüttüğüm doktora çalışmalarıyla yapay zekâ alanındaki akademik ve uygulamalı araştırmalarımı sürdürüyorum."
   },
   {
     name: "Cambridge İngilizce",
