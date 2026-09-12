@@ -1,8 +1,8 @@
 export const conferences = [
   {
     slug: "kurumsal-yapay-zeka-okuryazarligi",
-    title: "MEB Maziden Atiye",
-    venue: "Cumhurbaşkanlığı",
+    title: "Maziden Atiye",
+    venue: "T.C Cumhurbaşkanlığı",
     image: "/images/konferans-yapay-zeka-okuryazarligi.png",
     description:
       "Cumhurbaşkanlığı Ahlat Külliyesinde genç yeteneklerle bir araya gelinerek kariyer çalışmaları yürütülmüştür."
