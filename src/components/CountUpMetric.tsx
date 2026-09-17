@@ -7,7 +7,7 @@ type CountUpMetricProps = {
   label: string;
 };
 
-const durationMs = 1200;
+const durationMs = 2200;
 
 function parseMetricValue(value: string) {
   const match = value.match(/^([\d.]+)(.*)$/);
@@ -40,7 +40,7 @@ export function CountUpMetric({ value, label }: CountUpMetricProps) {
 
     const tick = (now: number) => {
       const progress = Math.min((now - startedAt) / durationMs, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
+      const eased = 1 - Math.pow(1 - progress, 4);
 
       setDisplayValue(target * eased);
 
