@@ -38,7 +38,7 @@ export default function HomePage() {
         id="anasayfa"
         className="hero-grid relative scroll-mt-24 overflow-hidden border-b border-brand-line bg-brand-canvas"
       >
-        <div className="relative mx-auto grid max-w-7xl content-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:min-h-[76vh] lg:grid-cols-[1fr_0.82fr] lg:items-center lg:px-8">
+        <div className="relative mx-auto grid max-w-7xl content-center gap-10 px-4 py-12 sm:px-6 sm:py-16 lg:min-h-[70vh] lg:grid-cols-[1fr_0.82fr] lg:items-center lg:px-8">
           <div className="max-w-4xl">
             <div className="mb-8 inline-flex items-center gap-3 rounded-md border border-brand-line bg-white px-3 py-2 text-sm font-semibold text-brand-ink shadow-sm">
               <Image
