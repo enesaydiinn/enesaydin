@@ -6,6 +6,7 @@ import { BlogCard } from "@/components/BlogCard";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CertificationCard } from "@/components/CertificationCard";
 import { ConferenceCard } from "@/components/ConferenceCard";
+import { CountUpMetric } from "@/components/CountUpMetric";
 import { CourseCard } from "@/components/CourseCard";
 import { OnlineCourseCard } from "@/components/OnlineCourseCard";
 import { ReferenceMarquee } from "@/components/ReferenceMarquee";
@@ -95,10 +96,7 @@ export default function HomePage() {
       <section className="bg-white py-10">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
           {impactMetrics.map((metric) => (
-            <div key={metric.label} className="rounded-lg border border-brand-line bg-brand-canvas p-5">
-              <p className="font-display text-3xl font-bold text-brand-navy">{metric.value}</p>
-              <p className="mt-2 text-sm font-medium text-brand-muted">{metric.label}</p>
-            </div>
+            <CountUpMetric key={metric.label} value={metric.value} label={metric.label} />
           ))}
         </div>
       </section>
