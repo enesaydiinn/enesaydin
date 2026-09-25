@@ -74,7 +74,13 @@ export function Footer() {
           <p className="text-sm text-brand-muted">
             © {new Date().getFullYear()} Enes Aydın. Tüm hakları saklıdır.
           </p>
-          <div className="flex items-center gap-2" aria-label="Sosyal medya hesapları">
+          <div
+            className="flex flex-wrap items-center gap-3 rounded-lg border border-brand-line bg-slate-50 px-3 py-2"
+            aria-label="Sosyal medya hesapları"
+          >
+            <span className="text-xs font-semibold uppercase tracking-wide text-brand-navy">
+              Bizi takip edin
+            </span>
             {socialLinks.map((social) => {
               const Icon = social.icon;
 
@@ -85,12 +91,12 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`${social.label} hesabını aç`}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-brand-line text-brand-muted transition hover:border-brand-blue hover:text-brand-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 bg-white text-brand-navy shadow-sm transition hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
                   {Icon ? (
-                    <Icon className="h-4 w-4" aria-hidden="true" />
+                    <Icon className="h-5 w-5" aria-hidden="true" />
                   ) : (
-                    <span className="font-display text-sm font-bold" aria-hidden="true">
+                    <span className="font-display text-base font-bold" aria-hidden="true">
                       X
                     </span>
                   )}
