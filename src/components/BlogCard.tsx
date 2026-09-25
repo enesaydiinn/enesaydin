@@ -22,7 +22,13 @@ export function BlogCard({ post }: BlogCardProps) {
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg border border-brand-line bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-soft">
-      <div className="relative aspect-[16/9] bg-slate-100">
+      <Link
+        href={postHref}
+        target="_blank"
+        rel="noreferrer"
+        className="relative block aspect-[16/9] bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-blue"
+        aria-label={`${post.title} yazısını aç`}
+      >
         <Image
           src={post.coverImage ?? "/images/blog-placeholder.svg"}
           alt={`${post.title} blog kapak görseli`}
@@ -33,7 +39,7 @@ export function BlogCard({ post }: BlogCardProps) {
             post.coverImageFit === "contain" ? "object-contain p-6" : "object-cover"
           )}
         />
-      </div>
+      </Link>
       <div className="flex flex-1 flex-col p-5">
       <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-brand-muted">
         <span className="rounded-md bg-blue-50 px-2.5 py-1 text-brand-blue">{post.category}</span>
