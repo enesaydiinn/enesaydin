@@ -28,6 +28,11 @@ export const references = [
     logo: "/images/references/turkcell.png"
   },
   {
+    name: "YEDAŞ",
+    logo: "/images/references/yedas.png",
+    logoFrameClassName: "h-16 w-44"
+  },
+  {
     name: "İçişleri Bakanlığı",
     logo: "/images/references/icisleri-bakanligi.png",
     logoFrameClassName: "h-20 w-20"
