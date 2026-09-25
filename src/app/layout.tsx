@@ -122,7 +122,7 @@ const organizationSchema = {
   logo: absoluteUrl(siteConfig.logo),
   email: siteConfig.email,
   telephone: siteConfig.phone,
-  sameAs: [siteConfig.linkedin]
+  sameAs: [siteConfig.linkedin, siteConfig.instagram, siteConfig.youtube, siteConfig.x]
 };
 
 const personSchema = {
@@ -138,7 +138,7 @@ const personSchema = {
   jobTitle: ["Proje Yöneticisi", "Teknoloji Danışmanı", "Kurumsal Eğitmen"],
   email: siteConfig.email,
   telephone: siteConfig.phone,
-  sameAs: [siteConfig.linkedin],
+  sameAs: [siteConfig.linkedin, siteConfig.instagram, siteConfig.youtube, siteConfig.x],
   knowsAbout: [
     "Proje Yönetimi",
     "Yapay Zeka",

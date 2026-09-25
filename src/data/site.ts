@@ -21,6 +21,9 @@ export const siteConfig = {
   email: "enes@cenglab.com",
   linkedin: "https://www.linkedin.com/in/enesaydin29/",
   linkedinHandle: "enesaydin29",
+  instagram: "https://www.instagram.com/cenglab/",
+  youtube: "https://www.youtube.com/@cenglab",
+  x: "https://x.com/cenglab",
   cvHref: "/enes-aydin-cv.pdf"
 };
 
