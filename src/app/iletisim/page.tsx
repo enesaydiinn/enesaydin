@@ -46,7 +46,7 @@ export default function ContactPage() {
             <div className="mt-6 space-y-3">
               <a className="flex min-h-12 items-center gap-3 rounded-md border border-brand-line px-4 text-sm font-semibold text-brand-ink transition hover:border-emerald-500 hover:text-emerald-600" href={siteConfig.whatsappHref} target="_blank" rel="noreferrer">
                 <WhatsAppIcon className="h-5 w-5" />
-                WhatsApp {siteConfig.whatsappHandle}
+                {siteConfig.whatsappHandle}
               </a>
               <a className="flex min-h-12 items-center gap-3 rounded-md border border-brand-line px-4 text-sm font-semibold text-brand-ink transition hover:border-brand-blue hover:text-brand-blue" href={`mailto:${siteConfig.email}`}>
                 <Mail className="h-4 w-4" aria-hidden="true" />

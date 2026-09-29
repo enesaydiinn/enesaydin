@@ -57,7 +57,7 @@ export function Footer() {
           <div className="mt-4 space-y-3 text-sm text-brand-muted">
             <a className="flex items-center gap-2 transition hover:text-emerald-600" href={siteConfig.whatsappHref} target="_blank" rel="noreferrer">
               <WhatsAppIcon className="h-5 w-5" />
-              WhatsApp {siteConfig.whatsappHandle}
+              {siteConfig.whatsappHandle}
             </a>
             <a className="flex items-center gap-2 transition hover:text-brand-blue" href={`mailto:${siteConfig.email}`}>
               <Mail className="h-4 w-4" aria-hidden="true" />
