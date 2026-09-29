@@ -24,7 +24,7 @@ export const siteConfig = {
   instagram: "https://www.instagram.com/cenglab/",
   youtube: "https://www.youtube.com/@cenglab",
   x: "https://x.com/cenglab",
-  cvHref: "/enes-aydin-cv.pdf"
+  cvHref: "https://www.linkedin.com/in/enesaydin29/"
 };
 
 export const navigation = [
