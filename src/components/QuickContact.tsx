@@ -8,11 +8,16 @@ export function QuickContact() {
         href={siteConfig.whatsappHref}
         target="_blank"
         rel="noreferrer"
-        aria-label="WhatsApp üzerinden @enesaydin29 hesabına yaz"
-        className="inline-flex min-h-11 items-center gap-2 rounded-md bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-soft transition hover:bg-emerald-700"
+        aria-label="WhatsApp üzerinden enesaydin29 hesabına yaz"
+        className="inline-flex min-h-14 items-center gap-3 rounded-lg bg-emerald-600 px-5 py-3 text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-emerald-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
       >
-        <WhatsAppIcon className="h-5 w-5" />
-        {siteConfig.whatsappHandle}
+        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
+          <WhatsAppIcon className="h-6 w-6" />
+        </span>
+        <span className="flex flex-col leading-tight">
+          <span className="text-sm font-bold">WhatsApp'tan Yaz</span>
+          <span className="text-xs font-semibold text-emerald-50">{siteConfig.whatsappHandle}</span>
+        </span>
       </a>
     </div>
   );
