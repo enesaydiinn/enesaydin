@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Instagram, Linkedin, Mail, Phone, Youtube } from "lucide-react";
+import { Instagram, Linkedin, Mail, Youtube } from "lucide-react";
 
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { navigation, siteConfig } from "@/data/site";
 
 const socialLinks = [
@@ -54,9 +55,9 @@ export function Footer() {
         <div>
           <h2 className="text-sm font-semibold uppercase text-brand-navy">İletişim</h2>
           <div className="mt-4 space-y-3 text-sm text-brand-muted">
-            <a className="flex items-center gap-2 transition hover:text-brand-blue" href={siteConfig.phoneHref}>
-              <Phone className="h-4 w-4" aria-hidden="true" />
-              {siteConfig.phone}
+            <a className="flex items-center gap-2 transition hover:text-emerald-600" href={siteConfig.whatsappHref} target="_blank" rel="noreferrer">
+              <WhatsAppIcon className="h-5 w-5" />
+              WhatsApp {siteConfig.whatsappHandle}
             </a>
             <a className="flex items-center gap-2 transition hover:text-brand-blue" href={`mailto:${siteConfig.email}`}>
               <Mail className="h-4 w-4" aria-hidden="true" />
