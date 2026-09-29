@@ -60,7 +60,12 @@ export default function AboutPage() {
                 devam etmektedir.
               </p>
             </div>
-            <ButtonLink href={siteConfig.cvHref} icon={<Download className="h-4 w-4" aria-hidden="true" />} className="mt-8">
+            <ButtonLink
+              href={siteConfig.cvHref}
+              icon={<Download className="h-4 w-4" aria-hidden="true" />}
+              className="mt-8"
+              target="_blank"
+            >
               CV İndir
             </ButtonLink>
           </div>

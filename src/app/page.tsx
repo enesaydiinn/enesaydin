@@ -177,7 +177,12 @@ export default function HomePage() {
               <ButtonLink href="/hakkimda" variant="secondary">
                 Hakkımda
               </ButtonLink>
-              <ButtonLink href={siteConfig.cvHref} variant="dark" icon={<BookOpen className="h-4 w-4" aria-hidden="true" />}>
+              <ButtonLink
+                href={siteConfig.cvHref}
+                variant="dark"
+                icon={<BookOpen className="h-4 w-4" aria-hidden="true" />}
+                target="_blank"
+              >
                 CV İndir
               </ButtonLink>
             </div>
