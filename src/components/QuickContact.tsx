@@ -14,10 +14,7 @@ export function QuickContact() {
         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
           <WhatsAppIcon className="h-6 w-6" />
         </span>
-        <span className="flex flex-col leading-tight">
-          <span className="text-sm font-bold">WhatsApp'tan Yaz</span>
-          <span className="text-xs font-semibold text-emerald-50">{siteConfig.whatsappHandle}</span>
-        </span>
+        <span className="text-sm font-bold">İletişime geç!</span>
       </a>
     </div>
   );
