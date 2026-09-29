@@ -17,7 +17,7 @@ export const siteConfig = {
     "Enes Aydın; proje yönetimi, teknoloji danışmanlığı, kurumsal yapay zeka eğitimi ve dijital dönüşüm alanlarında kurumlara sonuç odaklı eğitimler sunar.",
   phone: "0850 XXX XX XX",
   phoneHref: "tel:0850XXXXXXX",
-  whatsappHandle: "@enesaydin29",
+  whatsappHandle: "enesaydin29",
   whatsappHref: "https://wa.me/enesaydin29",
   email: "enes@cenglab.com",
   linkedin: "https://www.linkedin.com/in/enesaydin29/",
