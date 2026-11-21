@@ -35,7 +35,7 @@ export default function ContactPage() {
       <section className="py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <Suspense fallback={<div className="min-h-96 rounded-lg border border-brand-line bg-white" />}>
-            <ContactForm />
+            <ContactForm turnstileSiteKey={process.env.TURNSTILE_SITE_KEY?.trim() ?? ""} />
           </Suspense>
 
           <aside className="rounded-lg border border-brand-line bg-white p-6 shadow-sm">

@@ -1,11 +1,12 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send } from "lucide-react";
 
 import { corporateTrainings } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { TurnstileWidget } from "@/components/TurnstileWidget";
 
 type FormValues = {
   name: string;
@@ -60,7 +61,7 @@ function getFieldError(field: FormField, values: FormValues) {
   return "";
 }
 
-export function ContactForm() {
+export function ContactForm({ turnstileSiteKey }: { turnstileSiteKey: string }) {
   const searchParams = useSearchParams();
   const requestedTraining = searchParams.get("egitim") ?? "";
   const [sent, setSent] = useState(false);
@@ -69,6 +70,14 @@ export function ContactForm() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [touched, setTouched] = useState<Partial<Record<FormField, boolean>>>({});
   const [submitAttempted, setSubmitAttempted] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileResetSignal, setTurnstileResetSignal] = useState(0);
+  const [captchaError, setCaptchaError] = useState("");
+
+  const handleTurnstileToken = useCallback((token: string) => {
+    setTurnstileToken(token);
+    if (token) setCaptchaError("");
+  }, []);
 
   const selectedTraining = useMemo(() => {
     const course = corporateTrainings.find((item) => item.slug === requestedTraining);
@@ -132,11 +141,17 @@ export function ContactForm() {
     const nextErrors = (Object.keys(values) as FormField[]).filter((field) => getFieldError(field, values));
 
     setError("");
+    setCaptchaError("");
     setSent(false);
     setSubmitAttempted(true);
 
     if (nextErrors.length > 0) {
       setError("Lütfen kırmızı işaretli alanları düzeltin.");
+      return;
+    }
+
+    if (turnstileSiteKey && !turnstileToken) {
+      setCaptchaError("Lütfen doğrulamanın tamamlanmasını bekleyin.");
       return;
     }
 
@@ -155,7 +170,8 @@ export function ContactForm() {
           phone: values.phone,
           training: values.training,
           trainingOther: values.trainingOther,
-          message: values.message
+          message: values.message,
+          turnstileToken
         })
       });
 
@@ -174,6 +190,10 @@ export function ContactForm() {
       setError("Talep gönderilemedi. Lütfen bağlantınızı kontrol edip tekrar deneyin.");
     } finally {
       setIsSubmitting(false);
+      if (turnstileSiteKey) {
+        setTurnstileToken("");
+        setTurnstileResetSignal((signal) => signal + 1);
+      }
     }
   }
 
@@ -305,6 +325,16 @@ export function ContactForm() {
         />
         {fieldError("message") ? <span id="message-error" className="text-xs font-semibold text-red-600">{fieldError("message")}</span> : null}
       </label>
+      {turnstileSiteKey ? (
+        <div>
+          <TurnstileWidget
+            siteKey={turnstileSiteKey}
+            resetSignal={turnstileResetSignal}
+            onTokenChange={handleTurnstileToken}
+          />
+          {captchaError ? <p className="mt-2 text-sm text-red-600" role="alert">{captchaError}</p> : null}
+        </div>
+      ) : null}
       <button
         type="submit"
         disabled={isSubmitting}
